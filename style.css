@@ -1,0 +1,203 @@
+<style>
+    .hero-section {
+  	    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('fondo.png');
+  	    background-size: cover;
+  	    background-position: center;
+  	    color: white;
+  	    padding: 120px 0;
+  	    text-align: center;
+    }
+    .btn-gold {
+        background-color: #c5a059;
+        color: white;
+        border: none;
+    }
+    .btn-gold:hover {
+        background-color: #a38241;
+        color: white;
+    }
+    .service-card {
+        background: rgba(255, 255, 255, 0.05) !important; /* Casi transparente */
+        backdrop-filter: blur(8px); /* Efecto de vidrio esmerilado */
+        border: 1px solid rgba(197, 160, 89, 0.3) !important; /* Borde dorado tenue */
+        color: #fff;
+        transition: all 0.4s ease;
+    }
+    .card {
+        background-color: transparent !important;
+        border: none;
+    }
+    h2 {
+        color: #c5a059;
+        text-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
+    }
+    .service-card:hover {
+        transform: scale(1.05); /* Se agranda un poco */
+        box-shadow: 0 0 25px rgba(197, 160, 89, 0.5); /* Brilla en dorado */
+        border-color: #f9e2af !important;
+        transition: all 0.3s ease;
+    }
+    .service-card i {
+        transition: all 0.5s ease;
+    }
+    .service-card:hover i {
+        transform: rotateY(360deg); /* El icono da una vuelta completa al pasar el mouse */
+    }
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        max-width: 80%; /* Evita que el nombre empuje el botón de menú */
+    }
+    .navbar-brand img {
+        height: 45px !important; /* Tamaño controlado en móvil */
+        width: auto;
+    }
+    @media (min-width: 992px) {
+    .navbar-brand img { height: 75px !important; }
+    .nombre-despacho { font-size: 1.4rem !important; }
+    }
+	.nombre-despacho {
+       	color: #c5a059; 
+        font-weight: bold;
+        font-size: 0.8rem !important;
+    	line-height: 1.2;
+        text-transform: uppercase; 
+        letter-spacing: 1px;
+    }
+   	.nav-link:hover {
+	    color: #c5a059 !important;
+	    transition: 0.3s;
+    }
+	.dropdown-item:hover {
+        background-color: #c5a059;
+        color: white;
+	}
+	.hilo-luz {
+    	height: 2px;
+    	width: 100%;
+    	background: linear-gradient(to right, transparent, #c5a059, #f9e2af, #c5a059, transparent);
+    	box-shadow: 0 0 15px rgba(197, 160, 89, 0.8);
+    	margin: 40px 0;
+	}
+	body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        background-image: 
+       		url('https://www.transparenttextures.com/patterns/stardust.png'),
+       		radial-gradient(ellipse at 0% 10%, rgba(0, 255, 120, 0.2) 0%, transparent 60%),
+       	    linear-gradient(150deg, transparent 10%, rgba(0, 150, 70, 0.15) 20%, rgba(0, 255, 150, 0.25) 25%, transparent 35%),
+    	    linear-gradient(110deg, transparent 35%, rgba(197, 160, 89, 0.2) 45%, rgba(249, 226, 175, 0.4) 50%, rgba(197, 160, 89, 0.2) 55%, transparent 65%),
+   		    linear-gradient(100deg, transparent 60%, rgba(197, 160, 89, 0.15) 75%, rgba(249, 226, 175, 0.3) 80%, transparent 90%),       		    radial-gradient(circle at 40% 45%, rgba(255, 255, 255, 0.2) 0%, transparent 2%),
+       	    radial-gradient(circle at 70% 85%, rgba(255, 255, 255, 0.2) 0%, transparent 2%);
+        background-attachment: fixed;
+        background-size: auto, cover, cover, cover, cover, cover, cover;
+        color: #e0e0e0;
+        font-family: 'Segoe UI', sans-serif;
+	}
+    .glass-card {
+        background: rgba(0, 0, 0, 0.4) !important;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(197, 160, 89, 0.2);
+        border-radius: 15px;
+        padding: 30px;
+    }
+    .divider-gold {
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(to right, #c5a059, #f9e2af);
+        margin: 20px 0;
+    }
+    .border-gold {
+        border: 1px solid #c5a059 !important;
+        position: relative;
+        overflow: hidden;
+    }
+    .border-gold::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(197, 160, 89, 0.1), transparent);
+        transform: rotate(45deg);
+        transition: 0.6s;
+    }
+    .border-gold:hover::after {
+        left: 100%;
+    }
+    #acerca p {
+        text-align: justify;
+        line-height: 1.6;
+    }
+    .socio-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(197, 160, 89, 0.4) !important;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s;
+    }
+    .socio-card:hover {
+        transform: translateY(-5px);
+        border-color: #c5a059 !important;
+    }
+    .icon-box {
+        height: 100px; /* Un poco más de espacio para que respiren */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .icon-box i {
+        font-size: 3.5rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .servicio-titulo {
+        color: #c5a059;
+        font-weight: bold;
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+    }
+    .icon-box i.bi-bank, 
+    .icon-box i.bi-balance-scale {
+        font-size: 4.2rem !important; /* Le damos un empujón extra de tamaño */
+    }
+    .icon-box .bi-pen {
+        font-size: 1.8rem !important;
+        margin-left: -12px;
+        margin-top: 25px;
+    }
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover {
+        background-color: #128c7e;
+        color: #FFF;
+        transform: scale(1.1);
+    }
+</style>
